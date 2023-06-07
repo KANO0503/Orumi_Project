@@ -3,63 +3,237 @@
 <head>
     <meta charset="UTF-8" />
     <title>chat</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./CSS/style.css">
+    <!-- fontawesome -->
+    <script src="https://kit.fontawesome.com/9e9931aed0.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
-    
-    <div>
-        <form>
-            <input class ="border-4"type="text" placeholder="내용을 입력해주세요">
-            <button type="submit">전송</button>
-        </form>
-        <div id="contents"></div>
+    <!-- header -->
+        <div class="header">
+            <a href="http://127.0.0.1:5500/Project_1/index.html">
+                <img src="./Img/logo2.png" alt="" width="200px" height="85px">
+            </a>
+            <ul>
+                <li><a href="#plan-order">이용 방법</a></li>
+                <li><a href="#chat-box">여행 계획</a></li>
+                <li><a href="./Html/join.html">회원가입</a></li>
+                <li><a href="./Html/login.html">로그인</a></li>
+            </ul>
+            </div>
+
+        <!-- subtitle -->
+        <div class="subtitle">
+            <div>
+                여행의 모든 것 "트래블 재팬"에 오신 것을 환영합니다.
+            </div>
+            <a href="#chat-box">지금 바로 나만의 여행을 생성해보세요 !</a>
+        </div>
+        
+    <!-- main -->
+    <!-- 슬라이드 구현 -->
+    <div class="wrap">
+        <div class="content-wrap">
+            <ul class="slides">
+                <input type="radio" name="radio-btn" id="img-1" checked />
+                <li class="slide-container">
+                <div class="slide">
+                <img src=./img/2.avif />
+                </div>
+
+                <div class="nav">
+                <label for="img-6" class="prev">&#x2039;</label>
+                <label for="img-2" class="next">&#x203a;</label>
+                </div>
+                </li>
+
+                <input type="radio" name="radio-btn" id="img-2" />
+                <li class="slide-container">
+                    <div class="slide">
+                    <img src="./img/1.jpeg" />
+                    </div>
+
+                <div class="nav">
+                <label for="img-1" class="prev">&#x2039;</label>
+                <label for="img-3" class="next">&#x203a;</label>
+                </div>
+                </li>
+            
+                <input type="radio" name="radio-btn" id="img-3" />
+                <li class="slide-container">
+                    <div class="slide">
+                    <img src="./img/3.jpeg" />
+                    </div>
+                <div class="nav">
+                <label for="img-2" class="prev">&#x2039;</label>
+                <label for="img-4" class="next">&#x203a;</label>
+                </div>
+                </li>
+            
+                <input type="radio" name="radio-btn" id="img-4" />
+                <li class="slide-container">
+                    <div class="slide">
+                    <img src="./img/4.avif" />
+                    </div>
+                <div class="nav">
+                <label for="img-3" class="prev">&#x2039;</label>
+                <label for="img-5" class="next">&#x203a;</label>
+                </div>
+                </li>
+            
+                <input type="radio" name="radio-btn" id="img-5" />
+                <li class="slide-container">
+                    <div class="slide">
+                    <img src="./img/5.jpeg" />
+                    </div>
+                <div class="nav">
+                <label for="img-4" class="prev">&#x2039;</label>
+                <label for="img-6" class="next">&#x203a;</label>
+                </div>
+                </li>
+            
+                <input type="radio" name="radio-btn" id="img-6" />
+                <li class="slide-container">
+                    <div class="slide">
+                    <img src="./img/6.jpeg" />
+                    </div>
+                <div class="nav">
+                <label for="img-5" class="prev">&#x2039;</label>
+                <label for="img-1" class="next">&#x203a;</label>
+                </div>
+                </li>
+            
+                <li class="nav-dots">
+                <label for="img-1" class="nav-dot" id="img-dot-1"></label>
+                <label for="img-2" class="nav-dot" id="img-dot-2"></label>
+                <label for="img-3" class="nav-dot" id="img-dot-3"></label>
+                <label for="img-4" class="nav-dot" id="img-dot-4"></label>
+                <label for="img-5" class="nav-dot" id="img-dot-5"></label>
+                <label for="img-6" class="nav-dot" id="img-dot-6"></label>
+                </li>
+            </ul>
+        </div>
+            
+
+<!-- 여행 일정 계획 순서 -->
+<div id="plan-order">
+    <div class="order-title">
+        <h1>STEP 1</h1>
+        <p>여행지 선택</p>
     </div>
-    <script>
-        let $input = document.querySelector('input')
-        let $button = document.querySelector('button')
-        
-        
-        let data = [{
-            "role": "system",
-            "content": "assistant는 일본 여행 전문가이다."
-        }]
+    <i id="arrow"class="fa-solid fa-angle-right"></i>
+    <div class="order-title">
+        <h1>STEP 2</h1>
+        <p>일정 선택</p>
+    </div>
+    <i id="arrow" class="fa-solid fa-angle-right"></i>
+    <div class="order-title">
+        <h1>STEP 3</h1>
+        <p>여행 테마 선택</p>
+    </div>
+    <i id="arrow" class="fa-solid fa-angle-right"></i>
+    <div class="order-title">
+        <h1>STEP 4</h1>
+        <p>렌트 여부 선택</p>
+    </div>
+    <i id="arrow"class="fa-solid fa-angle-right"></i>
+    <div class="order-title">
+        <h1>STEP 5</h1>
+        <p>일정 생성</p>
+    </div>
+</div>
 
-        let url = `https://estsoft-openai-api.jejucodingcamp.workers.dev/`;
-        
-        $button.addEventListener('click', e =>{
-            e.preventDefault()
-            userInputData = $input.value
-            $input.value = ''
+<!-- 여행 일정 title -->
+<div class="border"></div>
+<div class="plan-title" id="chat-box" >
+    나만의 여행 플래너 트래블 재팬<br>
+    어떤 여행을 꿈꾸시나요?
+    <i id="planeicon"class="fa-solid fa-plane-departure"></i>
+</div>
 
-            data.push({
-                "role": "user",
-                "content": userInputData
-            }) 
-            // 답변 목록도 push를 하면 맥락을 이해하여 답변이 가능합니다.
-            // DAY 1, DAY 2, DAY 3와 같은 형식으로 답변해줘라고 미리 학습을 시켜놓으면 split('DAY') 이런 식으로 Card를 만들 수 있습니다.
+<!-- user 여행 일정 입력칸 -->
+    <div class="chat-container">
+        <form class="chat-form" action="post">
+            <p>여행 일정을 입력해주세요</p>
+            <div class="user_input">
+                <div class="location">
+                    <div>
+                        <p>출발지</p>
+                        <input id="start-point" type="text" placeholder="예)서울">
+                    </div>
+                        <div>
+                            <p>여행지</p>
+                            <input id="destination"type="text" placeholder="예)오사카">
+                        </div>
+                </div>
+                <div class="time">
+                    <div class="depart">
+                        <p>출발일</p>
+                        <input id="depart-schedule"type="date" name="depart">
+                    </div>
+                    <div class="arrive">
+                        <p>도착일</p>
+                        <input id="arrive-schedule" type="date" name="arrive">
+                    </div>
+                </div>
+                <div>
+                    <p>선호하는 여행테마를 선택해주세요</p>
+                    <input id="favorite-tema"type="checkbox" name="tema" value="food">식도락
+                    <input id="favorite-tema"type="checkbox" name="tema" value="landscape">자연 풍경
+                    <input id="favorite-tema"type="checkbox" name="tema" value="history">역사 유적
+                    <input id="favorite-tema"type="checkbox" name="tema" value="activity">액티비티
+                    <input id="favorite-tema"type="checkbox" name="tema" value="sake">사케
+                    <input id="favorite-tema"type="checkbox" name="tema" value="onsen">온천
+                </div>
+                <div>
+                    <p>차량 렌트 하시나요?</p>
+                    <input type="radio" name="car-rent" value="yes">예
+                    <input type="radio" name="car-rent" value="no">아니오
+                </div>
+                <div>
+                    <button class="submit-button" id="button" type="submit" onclick="this.classList.toggle('button--loading')">
+                        <span class="button__text">일정 생성</span></button>
+                </div>
+            </div>
+        </form>
+    </div>
 
-            chatGptAPI()
-        })
+    <!-- user 여행 일정 answer칸 -->
+    <div class=chat-answer>
+        <div class="answer-title">
+            여행 일정
+        </div>
+        <div id="answer">
+            <textarea class="chat-textarea"
+            name="content"
+            id="chat-content"
+            placeholder="여행 일정이 완성되고 있습니다. 잠시만 기다려주세요 :)"></textarea>
+        </div>
+    </div>
+    <!-- main wrap 끝 -->
+    </div> 
 
-        function chatGptAPI(){
-            fetch(url, {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json",
-                },
-                body: JSON.stringify(data),
-                redirect: "follow",
-            })
-            .then(res => res.json())
-            .then(res => {
-                // console.log(res)
-                // console.log(res.choices[0].message.content)
-                document.querySelector('#contents').innerText = res.choices[0].message.content
-            })
-            // 아래 코드는 fetch 성공, 실패, 통신 중 여부와 상관없이 실행됩니다. 비동기에요.
-            console.log('hello world')
-        }
-    </script>
+    <!-- footer -->
+    <footer class="footer">
+        <div>
+            <div class="icon">
+                <a href="https://github.com/kimyeoju"><i id="icon"class="fa-brands fa-github"></i></a>
+                <a href="https://www.instagram.com/yeoju_uj/"><i id="icon"class="fa-brands fa-instagram"></i></a>
+                <a href="https://m.blog.naver.com/d_d0031?fbclid=PAAaaebyCsm_LHxDJRsaHPkBV37CbW8DErKLOhvhiKhOE8rvDjmURfPpoY19k_aem_th_AYRZifwGLHEk9tZ-Te2Zh-GCO6n2ySLsvv8wOPgJtJxTlTBhPdT0BPMWKik6sbAZ8g0" ><i id="icon" class="fa-solid fa-blog"></i></a>
+            </div>
+            Copyright 2023. Travel Japan All rights reserved
+        </div>
+
+    </footer>
+
+    <!-- javascript 연동 -->
+    <script src="./JS/chatbot.js"></script>
+    <script src="./JS/loading.js"></script>
+    <script src="./JS/scroll.js"></script>
 </body>
 </html>
 </html>
