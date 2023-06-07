@@ -1,0 +1,529 @@
+* {
+    font-family: 'Do Hyeon', sans-serif;
+}
+
+/* 스크롤 유연하게 구현 */
+html{
+    scroll-behavior: smooth;
+}
+
+body,
+fieldset,
+ul {
+    margin:0px;
+    padding: 0px;
+    box-sizing: border-box;
+    height: auto;
+}
+
+
+/* header */
+
+.header{
+    padding-top: 10px;
+    background-color:#E8E8E8;
+    text-shadow: 1px;
+    height: 100px;
+    border-bottom: 4px solid rgb(156,186,233);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: x-large;
+    
+}
+
+.header li {
+display: inline-block;
+}
+
+.header ul {
+    margin-right: 30px;
+    margin-top: 60px;
+}
+
+.header a:after {/*after 가상요소*/
+display:block;/*a요소를 블록 요소라고 선언*/
+content: '';
+border-bottom: solid 3px #fff;
+transform: scaleX(0);
+transition: transform 250ms ease-in-out;
+}
+
+.header a:hover:after {
+transform: scaleX(1);
+}
+
+.header a{
+    color: rgb(99, 151, 235);;
+    text-decoration: none;
+    line-height: 40px;
+    font-weight: 200;
+}
+
+a > img{
+    margin-left: 10px;
+}
+
+
+/* subtitle */
+
+.subtitle{
+    background-color: #f6f6f6a9;
+    font-size: x-large;
+    font-weight: lighter;
+    padding: 10px;
+    color: rgb(116, 112, 112);
+    margin: 10px 0px 10px 0px;
+}
+.subtitle > a:hover{
+    background-color: hsl(0, 0%, 100%);
+    text-shadow: 0px 0px 15px rgb(104, 183, 216);
+    opacity: 0.5s;
+    color: black;
+}
+
+.subtitle > a{
+    text-decoration: none;
+    color: rgb(116, 112, 112);
+
+}
+
+
+/* 로그인 페이지 */
+
+.login_body{
+    background-color: rgb(225, 220, 220);
+
+}
+.login{
+    width: 380px;
+    margin: 100px auto;
+    font-size: large;
+}
+
+.title,
+.description{
+    text-align: center;
+}
+
+.description{
+    color: gray;
+    font-size: medium;
+    margin: 20px 0;
+}
+form > div {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.save-id{
+    justify-content: center;
+}
+
+[type="text"] {
+    width:290px;
+    height:32px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-left: 10px;
+}
+
+[type="text"]: :read-only {
+    background-color : #ccc
+}
+
+.id,
+.pw {
+    display: flex
+}
+
+.id{
+    margin-left: 14px;
+}
+
+.submit-button{
+    width: 100%;
+    height: 40px;
+    background-color: rgb(91, 176, 230);
+    border: 1px solid gray;
+    color: white;
+    font-size: x-large;
+    font-weight: 500px;
+    border-radius: 4px;
+    margin-top: 10px;
+    box-sizing: content-box;
+    border-width: 0 0 3px 0;
+}
+
+/* 회원가입 페이지 */
+
+.join_body {
+    background-color:  rgb(225, 220, 220);
+    font-size: large;
+}
+
+.join_main{
+    width: 500px;
+    margin: 80px auto;
+}
+
+.field{
+    border:0;
+    margin: 10px 0;
+}
+
+.field ul{
+    list-style: none;
+    display: flex;
+    flex: wrap;
+}
+
+.label-width{
+    display: inline-block;
+    width: 70px;
+    margin-left: 40px;
+    gap: 2px;
+}
+
+legend{
+    margin-left:40px
+}
+
+.circle{
+    margin-left: 45px;
+    margin-top: 10px;
+}
+
+.square{
+    margin-left: 45px;
+}
+
+.wrap{
+    min-height: 100%;
+    padding-bottom: 60px;
+}
+
+/* 슬라이드 구현 */
+
+.slides {
+    padding: 0;
+    width: 100%;
+    height: 480px;
+    display: block;
+    margin: 0 auto;
+    position: relative;
+}
+
+.slides * {
+    user-select: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+}
+
+.slides input { display: none; }
+
+.slide-container { display: block; }
+
+.slide {
+    top: 0;
+    opacity: 0;
+    width: 100%;
+    height: 480px;
+    display: block;
+    position: absolute;
+
+    transform: scale(0);
+
+    transition: all .7s ease-in-out;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+}
+
+.nav label {
+    width: 200px;
+    height: 100%;
+    display: none;
+    position: absolute;
+
+    opacity: 0;
+    z-index: 9;
+    cursor: pointer;
+
+    transition: opacity .2s;
+
+    color: #FFF;
+    font-size: 100pt;
+    text-align: center;
+    line-height: 450px;
+    font-family: "Varela Round", sans-serif;
+    background-color: rgba(255, 255, 255, .3);
+    text-shadow: 0px 0px 15px rgb(119, 119, 119);
+}
+
+.slide:hover + .nav label { opacity: 0.5; }
+.nav label:hover { opacity: 1; }
+.nav .next { right: 0; }
+input:checked + .slide-container  .slide {
+    opacity: 1;
+    transform: scale(1);
+    transition: opacity 1s ease-in-out;
+}
+
+input:checked + .slide-container .nav label { display: block; }
+
+/* nav 버튼 */
+
+.nav-dots {
+width: 100%;
+bottom: 9px;
+height: 11px;
+display: block;
+position: absolute;
+text-align: center;
+}
+
+.nav-dots .nav-dot {
+top: -5px;
+width: 11px;
+height: 11px;
+margin: 0 4px;
+position: relative;
+border-radius: 100%;
+display: inline-block;
+background-color: rgba(0, 0, 0, 0.6);
+}
+
+.nav-dots .nav-dot:hover {
+cursor: pointer;
+background-color: rgba(0, 0, 0, 0.8);
+}
+
+input#img-1:checked ~ .nav-dots label#img-dot-1,
+input#img-2:checked ~ .nav-dots label#img-dot-2,
+input#img-3:checked ~ .nav-dots label#img-dot-3,
+input#img-4:checked ~ .nav-dots label#img-dot-4,
+input#img-5:checked ~ .nav-dots label#img-dot-5,
+input#img-6:checked ~ .nav-dots label#img-dot-6 {
+background: rgba(0, 0, 0, 0.8);
+}
+
+/* 여행 일정 계획 순서 */
+#plan-order{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    box-sizing: border-box;
+    font-size: large;
+    margin: 83px 0px 80px 0px;
+}
+
+/* 여행 일정 순서 아이콘 크기 조절 */
+#arrow{
+    font-size: xx-large;
+}
+
+
+/* 여행 일정 계획 순서 폰트 수정 */
+.order-title>h1{
+    color: rgb(135, 183, 228);
+}
+
+.order-title>p{
+    font-size: x-large;
+    text-align: center;
+    color: #494c4e;
+}
+
+/* 여행 일정 title */
+
+.plan-title{
+    background-color: rgb(156,186,233);
+    text-align: center;
+    justify-content: center;
+    color: rgb(74, 73, 73);
+    padding: 20px 10px 20px 10px;
+    margin: 20px 0px 20px 0px;
+}
+
+.plan-title{
+    font-size: xx-large;
+}
+
+#planeicon{
+    color: #636363;
+}
+
+/* user 여행 일정 입력 칸 */
+
+.chat-container{
+    margin: auto;
+    text-align: center;
+    border: 2px solid #ccc;
+    font-size: x-large;
+    /* background-color: #c6c1c1b8; */
+    background-color:#E8E8E8;
+    
+}
+
+.location,
+.time{
+    display: flex;
+    flex-direction: row;
+}
+
+.user_input{
+    display: inline-block;
+    flex-direction: row;
+    margin: 10px 0px 30px 0px;
+}
+
+.depart,
+.arrive{
+    margin: 0px 8px 0px 8px;
+}
+
+#start-point,
+#destination,
+#depart-schedule,
+#arrive-schedule{
+    width: 250px;
+    height: 40px;
+    border-radius: 4px;
+    font-size: large;
+}
+
+/* 버튼 */
+.submit-button {
+    width: 100%;
+    height: 40px;
+    margin-top: 10px;
+    border-width: 0 0 3px 0;
+    box-sizing: content-box;
+    position: relative;
+    background-color: rgb(91, 176, 230);
+    border-radius: 4px;
+    border: 1px solid gray;
+    font-size: x-large;
+    color: white;
+    cursor: pointer;
+}
+
+.submit-button:active {
+    background: #8edff8;
+}
+
+.button__text {
+    color: #ffffff;
+    transition: all 0.2s;
+}
+
+.button--loading .button__text {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.button--loading::after {
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    border: 4px solid transparent;
+    border-top-color: #ffffff;
+    border-radius: 50%;
+    animation: button-loading-spinner 1s ease infinite;
+}
+
+@keyframes button-loading-spinner {
+    from {
+    transform: rotate(0turn);
+    }
+
+    to {
+    transform: rotate(1turn);
+    }
+}
+
+
+/* answer 칸 */
+.chat-textarea{
+    width: 100%;
+    height: 330px;
+    font-size: x-large;
+}
+.answer-title{
+    background-color: rgb(156,186,233);
+    padding: 30px 10px 20px 10px;
+    margin: 20px 0px 20px 0px;
+    height: 50px;
+    color: rgb(74, 73, 73);
+}
+.chat-answer{
+    text-align: center;
+    font-size: xx-large;
+}
+
+
+/* footer */
+.footer {
+    background-color: hwb(213 53% 17%);
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: 100px;
+    display: flex;
+    transform: translateY(0%);
+    color: rgb(84, 82, 82);
+    font-size: x-large;
+}
+
+/* icon */
+
+#icon{
+    color: white;
+}
+
+.icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: xx-large;
+    gap: 20px;
+}
+
+
+/* scroll 버튼 */
+#scroll-btn {
+    cursor: pointer;
+    opacity: 0;
+    width: 80px;
+    height: 80px;
+    color: #fff;
+    background-color: #7cb4d6;
+    position: fixed;
+    bottom: 10%;
+    right: 10%;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    font: bold 30px monospace;
+    transition: opacity 0.5s, transform 0.5s;
+}
+
+#scroll-btn.show {
+    opacity: 1;
+    transition: opacity 1s, transform 1s;
+}
