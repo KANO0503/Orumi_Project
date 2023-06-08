@@ -1,21 +1,20 @@
+// HTML 버튼 요소를 생성
 const scrollTop = function () {
-    // create HTML button element
     const scrollBtn = document.createElement("button");
     scrollBtn.innerHTML = "&uarr;";
     scrollBtn.setAttribute("id", "scroll-btn");
     document.body.appendChild(scrollBtn);
-    // hide/show button based on scroll distance
+   // 스크롤 거리에 따라 버튼 숨기기, 보이기
     const scrollBtnDisplay = function () {
       window.scrollY > window.innerHeight
         ? scrollBtn.classList.add("show")
         : scrollBtn.classList.remove("show");
     };
     window.addEventListener("scroll", scrollBtnDisplay);
-    // scroll to top when button clicked
+  // 버튼을 클릭하면 상단으로 스크롤
     const scrollWindow = function () {
       if (window.scrollY != 0) {
         setTimeout(function () {
-        //   window.scrollTo(0, window.scrollY -50);
         window.scrollTo({top: location, behavior: "smooth"});
           scrollWindow();
         }, 650);

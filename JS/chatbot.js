@@ -2,6 +2,7 @@
 let url = `https://estsoft-openai-api.jejucodingcamp.workers.dev/`;
 
 let $form = document.querySelector('.chat-form');
+const $loadingScreen = document.querySelector('#loading-screen');
 
 
 // 사용자의 질문
@@ -44,10 +45,11 @@ const makePrompt = function () {
         break;
       }
     }
+    
     // 메세지 전달 형식 : From user to API
     data.push({
       role: "user",
-      content: `여행계획을 만들어줘. 출발일:${depart}, 도착일:${arrive}, 출발지:${start}, 여행지:${arrive}, 선호하는여행테마:${favorite},자동차유무:${carRent} \n 이 내용을 기반으로 여행계획을 만들어줘`,
+      content: `여행계획을 만들어줘. 출발일:${depart}, 도착일:${arrive}, 출발지:${start}, 여행지:${destination}, 선호하는여행테마:${favorite},자동차유무:${carRent} \n 이 내용을 기반으로 여행계획을 만들어줘`,
     });
     console.log(data);
 }
@@ -60,16 +62,25 @@ let data = [
     },
     {
         role: 'user',
-        content: '식도락 여행을 가고싶어.'
+        content: '여행지는 훗카이도, 홋카이도, 도쿄, 오사카, 교토, 후쿠오카, 오키나와, 히로시마, 나고야 등등'
     },
     {
         role: 'assistant',
         content:
-            '사용자가 입력하는 일본지역에 따라 그 지역의 구글 지도 평점 4.0인 식당을 알려줘.'
+            'user가 입력한 ${destination}에 따라 여행 계획을 알려줘.'
     },
     {
         role: 'user',
-        content: '자연 풍경 여행을 가고싶어.'
+        content: '선호하는 테마 식도락'
+    },
+    {
+        role: 'assistant',
+        content:
+            '사용자가 입력하는 일본지역에 따라 그 지역의 구글 지도 평점 3.8 이상인 식당을 알려줘.'
+    },
+    {
+        role: 'user',
+        content: '선호하는 테마 자연 풍경'
     },
     {
         role: 'assistant',
@@ -78,30 +89,30 @@ let data = [
     },
     {
         role: 'user',
-        content: '역사 유적 여행을 가고싶어.'
+        content: '선호하는 여행테마 역사 유적'
     },
     {
         role: 'assistant',
         content:
-            '사용자가 입력하는 일본지역에 따라 그 지역에 유적지로 알려줘.'
+            '사용자가 입력하는 일본지역에 따라 그 지역에 역사가 깊은 유적지나 박물관 위주로 알려줘.'
     },
     {
         role: 'user',
-        content: '액티비티 여행을 하고싶어.'
+        content: '선호하는 여행테마 액티비티'
     },
     {
         role: 'assistant',
         content:
-            '사용자가 입력하는 일본지역에 따라 그 지역에서 이용할 수 있는 액티비티한 활동을 알려줘.'
+            '사용자가 입력하는 일본지역에 따라 그 지역에서 이용할 수 있는 액티비티 한 레크레이션 활동을 알려줘.'
     },
     {
         role: 'user',
-        content: '사케 여행을 하고싶어.'
+        content: '선호하는 여행테마 쇼핑'
     },
     {
         role: 'assistant',
         content:
-            '사용자가 입력하는 일본지역에 따라 그 지역에서 유명한 사케를 어디서 먹을 수 있는지 알려줘.'
+            '사용자가 입력하는 일본지역에 따라 그 지역에서 쇼핑할 수 있는 백화점 아울렛으로 알려줘.'
     },
     {
         role: 'user',
@@ -110,7 +121,7 @@ let data = [
     {
         role: 'assistant',
         content:
-            '사용자가 입력하는 일본지역에 따라 그 지역에서 유명한 온천을 알려줘.'
+            '사용자가 입력하는 일본지역에 따라 그 지역에 있는 온천을 알려줘.'
     },
     {
         role: 'user',

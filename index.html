@@ -8,6 +8,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./CSS/style.css">
+    <!-- jquery -->
+    <script src="http://code.jquery.com/jquery-3.5.1.js"></script>
     <!-- fontawesome -->
     <script src="https://kit.fontawesome.com/9e9931aed0.js" crossorigin="anonymous"></script>
 </head>
@@ -186,7 +188,7 @@
                     <input id="favorite-tema"type="checkbox" name="tema" value="landscape">자연 풍경
                     <input id="favorite-tema"type="checkbox" name="tema" value="history">역사 유적
                     <input id="favorite-tema"type="checkbox" name="tema" value="activity">액티비티
-                    <input id="favorite-tema"type="checkbox" name="tema" value="sake">사케
+                    <input id="favorite-tema"type="checkbox" name="tema" value="shopping">쇼핑
                     <input id="favorite-tema"type="checkbox" name="tema" value="onsen">온천
                 </div>
                 <div>
@@ -195,8 +197,10 @@
                     <input type="radio" name="car-rent" value="no">아니오
                 </div>
                 <div>
+                    <!-- 버튼 -->
                     <button class="submit-button" id="button" type="submit" onclick="this.classList.toggle('button--loading')">
-                        <span class="button__text">일정 생성</span></button>
+                    <span class="button-text">일정 생성</span>
+                    </button>
                 </div>
             </div>
         </form>
@@ -215,7 +219,7 @@
         </div>
     </div>
     <!-- main wrap 끝 -->
-    </div> 
+    </div>
 
     <!-- footer -->
     <footer class="footer">
@@ -234,6 +238,7 @@
     <script src="./JS/chatbot.js"></script>
     <script src="./JS/loading.js"></script>
     <script src="./JS/scroll.js"></script>
+
 </body>
 </html>
 </html>

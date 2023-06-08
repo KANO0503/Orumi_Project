@@ -422,12 +422,12 @@ background: rgba(0, 0, 0, 0.8);
     background: #8edff8;
 }
 
-.button__text {
+.button-text {
     color: #ffffff;
     transition: all 0.2s;
 }
 
-.button--loading .button__text {
+.button--loading .button-text {
     visibility: hidden;
     opacity: 0;
 }
@@ -447,6 +447,9 @@ background: rgba(0, 0, 0, 0.8);
     border-radius: 50%;
     animation: button-loading-spinner 1s ease infinite;
 }
+
+
+
 
 @keyframes button-loading-spinner {
     from {
@@ -527,3 +530,5 @@ background: rgba(0, 0, 0, 0.8);
     opacity: 1;
     transition: opacity 1s, transform 1s;
 }
+
+
