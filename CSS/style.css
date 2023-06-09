@@ -187,7 +187,11 @@ form > div {
 }
 
 legend{
-    margin-left:40px
+    margin-left:40px;
+}
+
+.square > li{
+    margin-top: 10px;
 }
 
 .circle{
@@ -402,6 +406,7 @@ background: rgba(0, 0, 0, 0.8);
     font-size: large;
 }
 
+
 /* 버튼 */
 .submit-button {
     width: 100%;
@@ -449,8 +454,6 @@ background: rgba(0, 0, 0, 0.8);
 }
 
 
-
-
 @keyframes button-loading-spinner {
     from {
     transform: rotate(0turn);
@@ -460,7 +463,6 @@ background: rgba(0, 0, 0, 0.8);
     transform: rotate(1turn);
     }
 }
-
 
 /* answer 칸 */
 .chat-textarea{
@@ -523,12 +525,11 @@ background: rgba(0, 0, 0, 0.8);
     border: 2px solid #fff;
     border-radius: 50%;
     font: bold 30px monospace;
-    transition: opacity 0.5s, transform 0.5s;
+    transition: opacity 0.8s, transform 0.8s;
 }
 
 #scroll-btn.show {
     opacity: 1;
     transition: opacity 1s, transform 1s;
 }
-
 
