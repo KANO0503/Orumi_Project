@@ -2,12 +2,14 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8" />
-    <title>chat</title>
+    <title>Travel Japan</title>
     <!-- font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./CSS/style.css">
+    <link rel="stylesheet" href="/Project_1/CSS/menu.css">
+    <link rel="stylesheet" href="./CSS/slide.css">
     <!-- fontawesome -->
     <script src="https://kit.fontawesome.com/9e9931aed0.js" crossorigin="anonymous"></script>
 </head>
@@ -15,25 +17,27 @@
 <body>
     <!-- header -->
         <div class="header">
-            <a href="http://127.0.0.1:5500/Project_1/index.html">
-                <img src="./Img/logo2.png" alt="" width="200px" height="85px">
-            </a>
-            <ul>
+            <div class="nav">
+                <i class="fa-solid fa-globe"></i>
+                <a href="http://127.0.0.1:5500/Project_1/index.html">Travel Japan</a>
+            </div>
+            <ul class="menu">
                 <li><a href="#plan-order">이용 방법</a></li>
                 <li><a href="#chat-box">여행 계획</a></li>
                 <li><a href="./Html/join.html">회원가입</a></li>
                 <li><a href="./Html/login.html">로그인</a></li>
             </ul>
+            <ul class="menu_icons">
+                <a href="https://github.com/kimyeoju"><i id="icon"class="fa-brands fa-github"></i></a>
+                <a href="https://www.instagram.com/yeoju_uj/"><i id="icon"class="fa-brands fa-instagram"></i></a>
+                <a href="https://m.blog.naver.com/d_d0031?fbclid=PAAaaebyCsm_LHxDJRsaHPkBV37CbW8DErKLOhvhiKhOE8rvDjmURfPpoY19k_aem_th_AYRZifwGLHEk9tZ-Te2Zh-GCO6n2ySLsvv8wOPgJtJxTlTBhPdT0BPMWKik6sbAZ8g0" ><i id="icon" class="fa-solid fa-blog"></i></a>
+            </ul>
+
+            <a href="#" class="header_toogleBtn">
+            <i class="fas fa-bars"></i>
+            </a>
             </div>
 
-        <!-- subtitle -->
-        <div class="subtitle">
-            <div>
-                여행의 모든 것 "트래블 재팬"에 오신 것을 환영합니다.
-            </div>
-            <a href="#chat-box">지금 바로 나만의 여행을 생성해보세요 !</a>
-        </div>
-        
     <!-- main -->
     <!-- 슬라이드 구현 -->
     <div class="wrap">
@@ -42,7 +46,7 @@
                 <input type="radio" name="radio-btn" id="img-1" checked />
                 <li class="slide-container">
                 <div class="slide">
-                <img src=./img/2.avif />
+                <img src="./Img/1.jpeg"/>
                 </div>
 
                 <div class="nav">
@@ -54,7 +58,7 @@
                 <input type="radio" name="radio-btn" id="img-2" />
                 <li class="slide-container">
                     <div class="slide">
-                    <img src="./img/1.jpeg" />
+                    <img src="./Img/2.avif" />
                     </div>
 
                 <div class="nav">
@@ -116,50 +120,56 @@
                 <label for="img-6" class="nav-dot" id="img-dot-6"></label>
                 </li>
             </ul>
+            <div class="subtitle">
+                <p>여행의 모든 것 "트래블 재팬"에 오신 것을 환영합니다.</p>
+                <a href="#chat-box">지금 바로 나만의 여행을 생성해보세요 !</a>
+            </div>
         </div>
             
+    <!-- 여행 일정 계획 순서 -->
+    <div id="plan-order">
+        <div class="order-title">
+            <h1>STEP 1</h1>
+            <p>여행지 선택</p>
+        </div>
+        <i id="arrow"class="fa-solid fa-angle-right"></i>
+        <div class="order-title">
+            <h1>STEP 2</h1>
+            <p>일정 선택</p>
+        </div>
+        <i id="arrow" class="fa-solid fa-angle-right"></i>
+        <div class="order-title">
+            <h1>STEP 3</h1>
+            <p>여행 테마 선택</p>
+        </div>
+        <i id="arrow" class="fa-solid fa-angle-right"></i>
+        <div class="order-title">
+            <h1>STEP 4</h1>
+            <p>렌트 여부 선택</p>
+        </div>
+        <i id="arrow"class="fa-solid fa-angle-right"></i>
+        <div class="order-title">
+            <h1>STEP 5</h1>
+            <p>일정 생성</p>
+        </div>
+    </div>
 
-<!-- 여행 일정 계획 순서 -->
-<div id="plan-order">
-    <div class="order-title">
-        <h1>STEP 1</h1>
-        <p>여행지 선택</p>
-    </div>
-    <i id="arrow"class="fa-solid fa-angle-right"></i>
-    <div class="order-title">
-        <h1>STEP 2</h1>
-        <p>일정 선택</p>
-    </div>
-    <i id="arrow" class="fa-solid fa-angle-right"></i>
-    <div class="order-title">
-        <h1>STEP 3</h1>
-        <p>여행 테마 선택</p>
-    </div>
-    <i id="arrow" class="fa-solid fa-angle-right"></i>
-    <div class="order-title">
-        <h1>STEP 4</h1>
-        <p>렌트 여부 선택</p>
-    </div>
-    <i id="arrow"class="fa-solid fa-angle-right"></i>
-    <div class="order-title">
-        <h1>STEP 5</h1>
-        <p>일정 생성</p>
-    </div>
-</div>
+    <!-- 여행 사진 소개 -->
 
-<!-- 여행 일정 title -->
-<div class="border"></div>
-<div class="plan-title" id="chat-box" >
-    나만의 여행 플래너 트래블 재팬<br>
-    어떤 여행을 꿈꾸시나요?
-    <i id="planeicon"class="fa-solid fa-plane-departure"></i>
-</div>
+
+    <!-- 여행 일정 title -->
+    <div class="border"></div>
+    <div class="plan-title" id="chat-box" >
+        나만의 여행 플래너 트래블 재팬<br>
+        어떤 여행을 꿈꾸시나요?
+        <i id="planeicon"class="fa-solid fa-plane-departure"></i>
+    </div>
 
 <!-- user 여행 일정 입력칸 -->
     <div class="chat-container">
         <form class="chat-form" action="post">
-            <p>여행 일정을 입력해주세요</p>
             <div class="user_input">
+                <h2 class="chat-head">여행 일정을 입력해주세요</h2>
                 <div class="location">
                     <div>
                         <p>출발지</p>
@@ -180,42 +190,77 @@
                         <input id="arrive-schedule" type="date" name="arrive">
                     </div>
                 </div>
-                <div>
-                    <p>선호하는 여행테마를 선택해주세요</p>
-                    <input id="favorite-tema"type="checkbox" name="tema" value="food">식도락
-                    <input id="favorite-tema"type="checkbox" name="tema" value="landscape">자연 풍경
-                    <input id="favorite-tema"type="checkbox" name="tema" value="history">역사 유적
-                    <input id="favorite-tema"type="checkbox" name="tema" value="activity">액티비티
-                    <input id="favorite-tema"type="checkbox" name="tema" value="shopping">쇼핑
-                    <input id="favorite-tema"type="checkbox" name="tema" value="onsen">온천
+    <!-- 선호하는 여행테마 -->
+    <div>
+    <fieldset class="qna">
+        <div class="select">
+            <legend>선호하는 여행테마를 선택해주세요</legend>
+        </div>
+    <ul class="main-tema">
+    <li>
+        <input type="checkbox" id="favorite-food"     name="tema" value="food">
+    <label for="favorite-food">식도락</label>
+    </li>
+    <li>
+        <input type="checkbox" id="favorite-landscape"     name="tema"value="landscape">
+        <label for="favorite-landscape">자연 풍경</label>
+    </li>
+    <li>
+        <input type="checkbox" id="favorite-history"     name="tema" value="history">
+        <label for="favorite-history">역사 유적</label>
+    </li>
+    <li>
+        <input type="checkbox" id="favorite-activity"     name="tema" value="activity">
+        <label for="favorite-activity">액티비티</label>
+    </li>
+    <li>
+        <input type="checkbox" id="favorite-shopping"     name="tema" value="shopping">
+        <label for="favorite-shopping">쇼핑</label>
+    </li>
+    <li>
+        <input type="checkbox" id="favorite-spa"     name="tema" value="spa">
+        <label for="favorite-spa">온천</label>
+    </li>
+    </ul>
+    </fieldset>
                 </div>
+                <!-- 차량 렌트 여부 -->
                 <div>
-                    <p>차량 렌트 하시나요?</p>
-                    <input type="radio" name="car-rent" value="yes">예
-                    <input type="radio" name="car-rent" value="no">아니오
+                    <fieldset class="qna">
+                        <div class="select">
+                            <legend>차량 렌트 하시나요?</legend>
+                        </div>
+                        <ul class="main-rent">
+                            <li>
+                            <input type="radio" id="car-yes" name="car-rent" value="yes">
+                            <label for="car-yes">예</label>
+                            </li>
+                            <li>
+                                <input type="radio" id="car-no" name="car-rent" value="no">
+                                <label for="car-no">아니오</label>
+                            </li>
+                        </ul>
+                    </fieldset>
                 </div>
+                <!-- 버튼 -->
                 <div>
-                    <!-- 버튼 -->
                     <button class="submit-button" id="button" type="submit" onclick="this.classList.toggle('button--loading')">
                     <span class="button-text">일정 생성</span>
                     </button>
                 </div>
             </div>
         </form>
+        <!-- user 여행 일정 answer칸 -->
+        <div class=chat-answer>
+            <div id="answer">
+                <textarea class="chat-textarea"
+                name="content"
+                id="chat-content"
+                placeholder="여행 일정이 완성되고 있습니다. 잠시만 기다려주세요 :)"></textarea>
+            </div>
+        </div>
     </div>
 
-    <!-- user 여행 일정 answer칸 -->
-    <div class=chat-answer>
-        <div class="answer-title">
-            여행 일정
-        </div>
-        <div id="answer">
-            <textarea class="chat-textarea"
-            name="content"
-            id="chat-content"
-            placeholder="여행 일정이 완성되고 있습니다. 잠시만 기다려주세요 :)"></textarea>
-        </div>
-    </div>
     <!-- main wrap 끝 -->
     </div>
 
@@ -233,10 +278,11 @@
     </footer>
 
     <!-- javascript 연동 -->
-    <script src="./JS/index.js"></script>
-    <script src="./JS/data.js"></script>
-    <script src="./JS/loading.js"></script>
-    <script src="./JS/scroll.js"></script>
+    <script src="./JS/index.js" defer></script>
+    <script src="./JS/data.js" defer></script>
+    <script src="./JS/loading.js" defer></script>
+    <script src="./JS/scroll.js" defer></script>
+    <script src="./JS/menu.js" defer></script>
 
 </body>
 </html>

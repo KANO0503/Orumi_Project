@@ -11,7 +11,7 @@ let data = [
     {
         role: 'assistant',
         content:
-            'user가 입력한 ${start-point}에 따라서 ${destination}으로 어떻게 가야 할 지 계획을 알려줘.'
+            'user가 입력한 출발지에 따라서 여행지로 어떻게 가야 할 지 계획을 알려줘.'
     },
     {
         role: 'user',
@@ -20,7 +20,7 @@ let data = [
     {
         role: 'assistant',
         content:
-            'user가 입력한 ${destination}에 따라 여행 계획을 알려줘.'
+            'user가 입력한 여행지에 따라 여행 계획을 알려줘.'
     },
     {
         role: 'user',
@@ -65,7 +65,7 @@ let data = [
     {
         role: 'assistant',
         content:
-            '사용자가 입력하는 일본지역에 따라 그 지역에서 쇼핑할 수 있는 백화점 아울렛으로 알려줘.'
+            '사용자가 입력하는 일본지역에 따라 그 지역에서 쇼핑할 수 있는 백화점과 아울렛 등을 알려줘.'
     },
     {
         role: 'user',
