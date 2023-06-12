@@ -7,8 +7,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR&display=swap" rel="stylesheet">
+    <!-- font2 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+    <!-- CSS -->
     <link rel="stylesheet" href="./CSS/style.css">
-    <link rel="stylesheet" href="/Project_1/CSS/menu.css">
+    <link rel="stylesheet" href="./CSS/menu.css">
     <link rel="stylesheet" href="./CSS/slide.css">
     <!-- fontawesome -->
     <script src="https://kit.fontawesome.com/9e9931aed0.js" crossorigin="anonymous"></script>
@@ -17,30 +22,30 @@
 <body>
     <!-- header -->
         <div class="header">
-            <div class="nav">
+            <div>
                 <i class="fa-solid fa-globe"></i>
-                <a href="http://127.0.0.1:5500/Project_1/index.html">Travel Japan</a>
+                <a href="https://kimyeoju.github.io/Orumi_Project/">Travel Japan</a>
             </div>
             <ul class="menu">
-                <li><a href="#plan-order">이용 방법</a></li>
+                <li><a href="#city-title">이용 방법</a></li>
                 <li><a href="#chat-box">여행 계획</a></li>
-                <li><a href="./Html/join.html">회원가입</a></li>
-                <li><a href="./Html/login.html">로그인</a></li>
+                <li><a href="./join.html">회원가입</a></li>
+                <li><a href="./login.html">로그인</a></li>
             </ul>
             <ul class="menu_icons">
                 <a href="https://github.com/kimyeoju"><i id="icon"class="fa-brands fa-github"></i></a>
                 <a href="https://www.instagram.com/yeoju_uj/"><i id="icon"class="fa-brands fa-instagram"></i></a>
                 <a href="https://m.blog.naver.com/d_d0031?fbclid=PAAaaebyCsm_LHxDJRsaHPkBV37CbW8DErKLOhvhiKhOE8rvDjmURfPpoY19k_aem_th_AYRZifwGLHEk9tZ-Te2Zh-GCO6n2ySLsvv8wOPgJtJxTlTBhPdT0BPMWKik6sbAZ8g0" ><i id="icon" class="fa-solid fa-blog"></i></a>
             </ul>
-
+            
             <a href="#" class="header_toogleBtn">
-            <i class="fas fa-bars"></i>
+                <i class="fas fa-bars"></i>
             </a>
-            </div>
-
-    <!-- main -->
-    <!-- 슬라이드 구현 -->
-    <div class="wrap">
+        </div>
+        
+        <!-- main -->
+        <!-- 슬라이드 구현 -->
+        <div class="wrap">
         <div class="content-wrap">
             <ul class="slides">
                 <input type="radio" name="radio-btn" id="img-1" checked />
@@ -70,7 +75,7 @@
                 <input type="radio" name="radio-btn" id="img-3" />
                 <li class="slide-container">
                     <div class="slide">
-                    <img src="./img/3.jpeg" />
+                    <img src="./Img/3.jpeg" />
                     </div>
                 <div class="nav">
                 <label for="img-2" class="prev">&#x2039;</label>
@@ -81,7 +86,7 @@
                 <input type="radio" name="radio-btn" id="img-4" />
                 <li class="slide-container">
                     <div class="slide">
-                    <img src="./img/4.avif" />
+                    <img src="./Img/4.avif" />
                     </div>
                 <div class="nav">
                 <label for="img-3" class="prev">&#x2039;</label>
@@ -92,7 +97,7 @@
                 <input type="radio" name="radio-btn" id="img-5" />
                 <li class="slide-container">
                     <div class="slide">
-                    <img src="./img/5.jpeg" />
+                    <img src="./Img/5.jpeg" />
                     </div>
                 <div class="nav">
                 <label for="img-4" class="prev">&#x2039;</label>
@@ -103,7 +108,7 @@
                 <input type="radio" name="radio-btn" id="img-6" />
                 <li class="slide-container">
                     <div class="slide">
-                    <img src="./img/6.jpeg" />
+                    <img src="./Img/6.jpeg" />
                     </div>
                 <div class="nav">
                 <label for="img-5" class="prev">&#x2039;</label>
@@ -126,6 +131,30 @@
             </div>
         </div>
             
+        <!-- Popular city -->
+
+        <div class="popular-city-title">
+            <i id="location-icon"class="fa-solid fa-location-dot"></i>
+            <h1>일본 여행 인기 도시 TOP 3</h1>
+        </div>
+        <div class="popular-city-list">
+            <div class="tokyo">
+            <img src="./Img/tokyo.jpeg" width="100%" height="auto">
+            <p id="city-title">Tokyo</p>
+            <p>도쿄</p>
+            </div>
+            <div class="osaka">
+            <img src="./Img/osaka.avif" width="100%" height="auto">
+            <p id="city-title">Osaka</p>
+            <p>오사카</p>
+            </div>
+            <div class="hukuoka">
+            <img src="./Img/hukuoka.jpeg" width="100%" height="auto">
+            <p id="city-title">Hukuoka</p>
+            <p>후쿠오카</p>
+            </div>
+        </div>
+
     <!-- 여행 일정 계획 순서 -->
     <div id="plan-order">
         <div class="order-title">
@@ -154,15 +183,11 @@
         </div>
     </div>
 
-    <!-- 여행 사진 소개 -->
-
 
     <!-- 여행 일정 title -->
-    <div class="border"></div>
     <div class="plan-title" id="chat-box" >
-        나만의 여행 플래너 트래블 재팬<br>
-        어떤 여행을 꿈꾸시나요?
-        <i id="planeicon"class="fa-solid fa-plane-departure"></i>
+        <p>나만의 여행 플래너 트래블 재팬</p>
+        <p>어떤 여행을 꿈꾸시나요? <i id="planeicon"class="fa-solid fa-plane-departure"></i></p>
     </div>
 
 <!-- user 여행 일정 입력칸 -->

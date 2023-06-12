@@ -8,18 +8,19 @@
 .header{
     position: sticky;
     top: 0;
+    z-index: 10;
 }
+
 .header{
-    /* background-color:#E8E8E8; */
-    background-color : var(--background-color);
-    border-bottom: 4px solid #A0C3D2;
+    color: var(--text-color);
+    background-color: #ffffff;
+    border-bottom: 4px solid var(--background-color);
     display: flex;
     align-items: center;
     justify-content: space-between;
     font-size: x-large;
     font-weight: bold;
     padding: 8px 12px;
-    color: var(--text-color);
 }
 
 a {
@@ -39,7 +40,7 @@ a {
 }
 
 .menu li:hover{
-    background-color: var(--accent-color);
+    background-color: var(--background-color);
     border-radius: 4px;
     opacity: 0.8;
 }
