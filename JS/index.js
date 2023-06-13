@@ -11,11 +11,11 @@ let question;
 const makePrompt = function () {
     // 출발지 값 읽어오기
     let startInput = document.getElementById("start-point");
-    let start = startInput.value;
+    let start = startInput.options[startInput.selectedIndex].value;
   
     // 여행지 값 읽어오기
     let destinationInput = document.getElementById("destination");
-    let destination = destinationInput.value;
+    let destination = destinationInput.options[destinationInput.selectedIndex].value;
   
     // 출발일 값 읽어오기
     let departInput = document.getElementById("depart-schedule");

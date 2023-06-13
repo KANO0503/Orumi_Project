@@ -4,10 +4,6 @@
     --accent-color: #A0C3D2;
 }
 
-/* 전체 폰트 적용 */
-* {
-    font-family: 'IBM Plex Sans KR', sans-serif;
-}
 
 /* 스크롤 유연하게 구현 */
 html{
@@ -19,6 +15,7 @@ fieldset,
 ul {
     margin:0;
     padding: 0;
+    font-family: 'IBM Plex Sans KR', sans-serif;
 }
 
 /* 이미지 위에 텍스트 편집 */
@@ -193,6 +190,8 @@ legend{
 
 .popular-city-list img{
     transition: all 0.2s linear;
+    width: 100%;
+    height: auto;
 }
 
 .popular-city-list:hover img{
@@ -274,6 +273,21 @@ legend{
 }
 
 /* user 여행 일정 입력, 답변 칸 */
+select option[value=""][disabled] {
+    display: none;
+}
+
+select {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+select{
+    font-family: 'IBM Plex Sans KR', sans-serif;
+}
+
+
 .chat-container{
     display: flex;
     justify-content: space-evenly;
@@ -343,9 +357,13 @@ legend{
     margin: 10px 0px 30px 0px;
 }
 
+
 .depart,
-.arrive{
+.arrive,
+.depart-airport,
+.arrive-airport{
     margin: 0px 8px 0px 8px;
+    font-family: 'IBM Plex Sans KR', sans-serif;
 }
 
 #start-point,
@@ -380,8 +398,13 @@ legend{
     flex: wrap;
 }
 
-.select{
+.select-tema,
+.select-rent{
     margin-bottom: 15px;
+}
+
+.select-rent{
+    padding-right: 23px;
 }
 
 
@@ -500,12 +523,11 @@ legend{
     border: 2px solid #ffffff;
     border-radius: 50%;
     font: bold 30px monospace;
-    transition: opacity 0.8s, transform 0.8s;
+    transition: opacity 0.5s, transform 0.5s;
 }
 
 #scroll-btn.show {
     opacity: 1;
     transition: opacity 1s, transform 1s;
 }
-
 

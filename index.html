@@ -32,12 +32,6 @@
                 <li><a href="./join.html">회원가입</a></li>
                 <li><a href="./login.html">로그인</a></li>
             </ul>
-            <ul class="menu_icons">
-                <a href="https://github.com/kimyeoju"><i id="icon"class="fa-brands fa-github"></i></a>
-                <a href="https://www.instagram.com/yeoju_uj/"><i id="icon"class="fa-brands fa-instagram"></i></a>
-                <a href="https://m.blog.naver.com/d_d0031?fbclid=PAAaaebyCsm_LHxDJRsaHPkBV37CbW8DErKLOhvhiKhOE8rvDjmURfPpoY19k_aem_th_AYRZifwGLHEk9tZ-Te2Zh-GCO6n2ySLsvv8wOPgJtJxTlTBhPdT0BPMWKik6sbAZ8g0" ><i id="icon" class="fa-solid fa-blog"></i></a>
-            </ul>
-            
             <a href="#" class="header_toogleBtn">
                 <i class="fas fa-bars"></i>
             </a>
@@ -51,7 +45,7 @@
                 <input type="radio" name="radio-btn" id="img-1" checked />
                 <li class="slide-container">
                 <div class="slide">
-                <img src="./Img/1.jpeg"/>
+                    <img src="./Img/1.jpeg"/>
                 </div>
 
                 <div class="nav">
@@ -63,7 +57,7 @@
                 <input type="radio" name="radio-btn" id="img-2" />
                 <li class="slide-container">
                     <div class="slide">
-                    <img src="./Img/2.avif" />
+                        <img src="./Img/2.avif" />
                     </div>
 
                 <div class="nav">
@@ -75,7 +69,7 @@
                 <input type="radio" name="radio-btn" id="img-3" />
                 <li class="slide-container">
                     <div class="slide">
-                    <img src="./Img/3.jpeg" />
+                        <img src="./Img/3.jpeg" />
                     </div>
                 <div class="nav">
                 <label for="img-2" class="prev">&#x2039;</label>
@@ -86,7 +80,7 @@
                 <input type="radio" name="radio-btn" id="img-4" />
                 <li class="slide-container">
                     <div class="slide">
-                    <img src="./Img/4.avif" />
+                        <img src="./Img/4.avif" />
                     </div>
                 <div class="nav">
                 <label for="img-3" class="prev">&#x2039;</label>
@@ -97,7 +91,7 @@
                 <input type="radio" name="radio-btn" id="img-5" />
                 <li class="slide-container">
                     <div class="slide">
-                    <img src="./Img/5.jpeg" />
+                        <img src="./Img/5.jpeg" />
                     </div>
                 <div class="nav">
                 <label for="img-4" class="prev">&#x2039;</label>
@@ -108,7 +102,7 @@
                 <input type="radio" name="radio-btn" id="img-6" />
                 <li class="slide-container">
                     <div class="slide">
-                    <img src="./Img/6.jpeg" />
+                        <img src="./Img/6.jpeg" />
                     </div>
                 <div class="nav">
                 <label for="img-5" class="prev">&#x2039;</label>
@@ -139,17 +133,17 @@
         </div>
         <div class="popular-city-list">
             <div class="tokyo">
-            <img src="./Img/tokyo.jpeg" width="100%" height="auto">
+            <img src="./Img/tokyo.jpeg">
             <p id="city-title">Tokyo</p>
             <p>도쿄</p>
             </div>
             <div class="osaka">
-            <img src="./Img/osaka.avif" width="100%" height="auto">
+            <img src="./Img/osaka.avif">
             <p id="city-title">Osaka</p>
             <p>오사카</p>
             </div>
             <div class="hukuoka">
-            <img src="./Img/hukuoka.jpeg" width="100%" height="auto">
+            <img src="./Img/hukuoka.jpeg">
             <p id="city-title">Hukuoka</p>
             <p>후쿠오카</p>
             </div>
@@ -196,13 +190,60 @@
             <div class="user_input">
                 <h2 class="chat-head">여행 일정을 입력해주세요</h2>
                 <div class="location">
-                    <div>
+                    <div class="depart-airport">
                         <p>출발지</p>
-                        <input id="start-point" type="text" placeholder="예)서울">
+                        <select id="start-point">
+                            <option value="" disabled selected>출발 도시 또는 공항 선택</option>
+                            <option name="start-point" value="incheon">인천</option>
+                            <option name="start-point" value="kimpo">김포</option>
+                            <option name="start-point" value="busan">부산</option>
+                            <option name="start-point" value="gwangju">광주</option>
+                            <option name="start-point" value="muan">무안</option>
+                            <option name="start-point" value="gunsan">군산</option>
+                            <option name="start-point" value="daegu">대구</option>
+                            <option name="start-point "value="jinju">진주(사천)</option>
+                            <option name="start-point "value="yeosu">여수</option>
+                            <option name="start-point "value="ulsan">울산</option>
+                            <option name="start-point "value="wonju">원주</option>
+                            <option name="start-point "value="chungju">청주</option>
+                            <option name="start-point "value="pohang">포항경주</option>
+                            <option name="start-point "value="yangyang">양양</option>
+                            <option name="start-point "value="jeju">제주</option>
+                        </select>
                     </div>
-                        <div>
+                        <div class="arrive-airport">
                             <p>여행지</p>
-                            <input id="destination"type="text" placeholder="예)오사카">
+                            <select id="destination">
+                                <option value="" disabled selected>여행지 선택</option>
+                                <optgroup label="홋카이도">
+                                    <option name="destination" value="sapporo">삿포로</option>
+                                </optgroup>
+                                <optgroup label="도호쿠">
+                                    <option name="destination" value="sendai">센다이</option>
+                                </optgroup>
+                                <optgroup label="간토">
+                                    <option name="destination" value="tokyo">도쿄</option>
+                                </optgroup>
+                                <optgroup label="주부">
+                                    <option name="destination" value="nagoya">나고야</option>
+                                </optgroup>
+                                <optgroup label="간사이">
+                                    <option name="destination" value="osaka">오사카</option>
+                                    <option name="destination" value="kyoto">교토</option>
+                                </optgroup>
+                                <optgroup label="시코쿠">
+                                    <option name="destination" value="tokusima">도쿠시마</option>
+                                </optgroup>
+                                <optgroup label="주코쿠">
+                                    <option name="destination" value="hiroshima">히로시마</option>
+                                </optgroup>
+                                <optgroup label="큐슈">
+                                    <option name="destination" value="kyusyu">규슈</option>
+                                </optgroup>
+                                <optgroup label="오키나와">
+                                    <option name="destination" value="okinawa">오키나와</option>
+                                </optgroup>
+                            </select>
                         </div>
                 </div>
                 <div class="time">
@@ -218,7 +259,7 @@
     <!-- 선호하는 여행테마 -->
     <div>
     <fieldset class="qna">
-        <div class="select">
+        <div class="select-tema">
             <legend>선호하는 여행테마를 선택해주세요</legend>
         </div>
     <ul class="main-tema">
@@ -231,15 +272,15 @@
         <label for="favorite-landscape">자연 풍경</label>
     </li>
     <li>
-        <input type="checkbox" id="favorite-history"     name="tema" value="history">
+        <input type="checkbox" id="favorite-history" name="tema" value="history">
         <label for="favorite-history">역사 유적</label>
     </li>
     <li>
-        <input type="checkbox" id="favorite-activity"     name="tema" value="activity">
+        <input type="checkbox" id="favorite-activity" name="tema" value="activity">
         <label for="favorite-activity">액티비티</label>
     </li>
     <li>
-        <input type="checkbox" id="favorite-shopping"     name="tema" value="shopping">
+        <input type="checkbox" id="favorite-shopping" name="tema" value="shopping">
         <label for="favorite-shopping">쇼핑</label>
     </li>
     <li>
@@ -252,7 +293,7 @@
                 <!-- 차량 렌트 여부 -->
                 <div>
                     <fieldset class="qna">
-                        <div class="select">
+                        <div class="select-rent">
                             <legend>차량 렌트 하시나요?</legend>
                         </div>
                         <ul class="main-rent">

@@ -7,6 +7,7 @@
     display: block;
     margin: 0 auto;
     position: relative;
+    font-family: 'IBM Plex Sans KR', sans-serif;
 }
 
 .slides * {
