@@ -7,4 +7,5 @@ function reset(){
     document.getElementById('arrive-schedule').value='';
     document.querySelectorAll("input[type=checkbox]").value='';
     document.querySelectorAll("input[type=radio]").value='';
+    document.getElementById('chat-content').value='';
 }

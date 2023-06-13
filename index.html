@@ -304,13 +304,11 @@
                 <!-- 버튼 -->
                 <div class="button-edit">
                     <div class="create-travel">
-                        <button class="submit-button" id="button" type="submit" onclick="this.classList.toggle('button--loading')">
-                        <span class="button-text">일정 생성</span>
-                        </button>
+                        <button class="submit-button" type="submit" id="button" onclick="btnshow()">일정 생성</button>
+                        <div id="loading-gif" style="display:none"><img src="./Img/spin.gif" alt="잠시만 기다려주세요"></div>
                     </div>
                     <div class="reset-travel">
-                        <button id="button" type="reset" onclick="reset()">
-                            초기화
+                        <button id="button" type="reset" onclick="reset()">초기화
                         </button>
                 </div>
                 </div>
@@ -346,11 +344,10 @@
     <!-- javascript 연동 -->
     <script src="./JS/index.js" defer></script>
     <script src="./JS/data.js" defer></script>
-    <script src="./JS/loading.js" defer></script>
     <script src="./JS/scroll.js" defer></script>
     <script src="./JS/menu.js" defer></script>
     <script src="./JS/reset.js" defer></script>
-
+    <script src="./JS/loader.js" defer></script>
 </body>
 </html>
 </html>
