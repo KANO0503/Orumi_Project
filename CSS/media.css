@@ -1,0 +1,16 @@
+/* 모바일 웹 반응형 */
+
+/* 이용 방법 */
+@media screen and (max-width: 480px) {
+    #plan-order{
+        flex-direction: column;
+        font-size: medium;
+    }
+    .popular-city-list{
+        margin: 10px 0px 10px 10px; 
+        }
+}
+
+
+
+

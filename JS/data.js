@@ -6,7 +6,7 @@ let data = [
     },
     {
         role: 'user',
-        content: '출발지는 강원도, 서울, 경기도, 충청남도, 충청북도, 전라남도, 전라북도, 제주도 등'
+        content: 'user가 선택한 출발지 user가 선택한 여행지'
     },
     {
         role: 'assistant',
@@ -15,7 +15,7 @@ let data = [
     },
     {
         role: 'user',
-        content: '여행지는 훗카이도, 홋카이도, 도쿄, 오사카, 교토, 후쿠오카, 오키나와, 히로시마, 나고야 등'
+        content: 'user가 입력한 여행지'
     },
     {
         role: 'assistant',

@@ -3,18 +3,11 @@
 <head>
     <meta charset="UTF-8" />
     <title>Travel Japan</title>
-    <!-- font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR&display=swap" rel="stylesheet">
-    <!-- font2 -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
     <!-- CSS -->
     <link rel="stylesheet" href="./CSS/style.css">
     <link rel="stylesheet" href="./CSS/menu.css">
     <link rel="stylesheet" href="./CSS/slide.css">
+    <link rel="stylesheet" href="./CSS/media.css">
     <!-- fontawesome -->
     <script src="https://kit.fontawesome.com/9e9931aed0.js" crossorigin="anonymous"></script>
 </head>
@@ -153,7 +146,7 @@
     <div id="plan-order">
         <div class="order-title">
             <h1>STEP 1</h1>
-            <p>여행지 선택</p>
+            <p>출발지, 여행지 선택</p>
         </div>
         <i id="arrow"class="fa-solid fa-angle-right"></i>
         <div class="order-title">
@@ -194,21 +187,21 @@
                         <p>출발지</p>
                         <select id="start-point">
                             <option value="" disabled selected>출발 도시 또는 공항 선택</option>
-                            <option name="start-point" value="incheon">인천</option>
-                            <option name="start-point" value="kimpo">김포</option>
-                            <option name="start-point" value="busan">부산</option>
-                            <option name="start-point" value="gwangju">광주</option>
-                            <option name="start-point" value="muan">무안</option>
-                            <option name="start-point" value="gunsan">군산</option>
-                            <option name="start-point" value="daegu">대구</option>
-                            <option name="start-point "value="jinju">진주(사천)</option>
-                            <option name="start-point "value="yeosu">여수</option>
-                            <option name="start-point "value="ulsan">울산</option>
-                            <option name="start-point "value="wonju">원주</option>
-                            <option name="start-point "value="chungju">청주</option>
-                            <option name="start-point "value="pohang">포항경주</option>
-                            <option name="start-point "value="yangyang">양양</option>
-                            <option name="start-point "value="jeju">제주</option>
+                            <option name="start-point" value="인천">인천</option>
+                            <option name="start-point" value="김포">김포</option>
+                            <option name="start-point" value="부산">부산</option>
+                            <option name="start-point" value="광주">광주</option>
+                            <option name="start-point" value="무안">무안</option>
+                            <option name="start-point" value="군산">군산</option>
+                            <option name="start-point" value="대구">대구</option>
+                            <option name="start-point "value="진주(사천)">진주(사천)</option>
+                            <option name="start-point "value="여수">여수</option>
+                            <option name="start-point "value="울산">울산</option>
+                            <option name="start-point "value="원주">원주</option>
+                            <option name="start-point "value="청주">청주</option>
+                            <option name="start-point "value="포항경주">포항경주</option>
+                            <option name="start-point "value="양양">양양</option>
+                            <option name="start-point "value="제주">제주</option>
                         </select>
                     </div>
                         <div class="arrive-airport">
@@ -216,32 +209,32 @@
                             <select id="destination">
                                 <option value="" disabled selected>여행지 선택</option>
                                 <optgroup label="홋카이도">
-                                    <option name="destination" value="sapporo">삿포로</option>
+                                    <option name="destination" value="삿포로">삿포로</option>
                                 </optgroup>
                                 <optgroup label="도호쿠">
-                                    <option name="destination" value="sendai">센다이</option>
+                                    <option name="destination" value="센다이">센다이</option>
                                 </optgroup>
                                 <optgroup label="간토">
-                                    <option name="destination" value="tokyo">도쿄</option>
+                                    <option name="destination" value="도쿄">도쿄</option>
                                 </optgroup>
                                 <optgroup label="주부">
-                                    <option name="destination" value="nagoya">나고야</option>
+                                    <option name="destination" value="나고야">나고야</option>
                                 </optgroup>
                                 <optgroup label="간사이">
-                                    <option name="destination" value="osaka">오사카</option>
-                                    <option name="destination" value="kyoto">교토</option>
+                                    <option name="destination" value="오사카">오사카</option>
+                                    <option name="destination" value="교토">교토</option>
                                 </optgroup>
                                 <optgroup label="시코쿠">
-                                    <option name="destination" value="tokusima">도쿠시마</option>
+                                    <option name="destination" value="도쿠시마">도쿠시마</option>
                                 </optgroup>
                                 <optgroup label="주코쿠">
-                                    <option name="destination" value="hiroshima">히로시마</option>
+                                    <option name="destination" value="히로시마">히로시마</option>
                                 </optgroup>
-                                <optgroup label="큐슈">
-                                    <option name="destination" value="kyusyu">규슈</option>
+                                <optgroup label="규슈">
+                                    <option name="destination" value="규슈">규슈</option>
                                 </optgroup>
                                 <optgroup label="오키나와">
-                                    <option name="destination" value="okinawa">오키나와</option>
+                                    <option name="destination" value="오키나와">오키나와</option>
                                 </optgroup>
                             </select>
                         </div>
@@ -264,11 +257,11 @@
         </div>
     <ul class="main-tema">
     <li>
-        <input type="checkbox" id="favorite-food"     name="tema" value="food">
+        <input type="checkbox" id="favorite-food" name="tema" value="food">
     <label for="favorite-food">식도락</label>
     </li>
     <li>
-        <input type="checkbox" id="favorite-landscape"     name="tema"value="landscape">
+        <input type="checkbox" id="favorite-landscape" name="tema"value="landscape">
         <label for="favorite-landscape">자연 풍경</label>
     </li>
     <li>
@@ -309,10 +302,17 @@
                     </fieldset>
                 </div>
                 <!-- 버튼 -->
-                <div>
-                    <button class="submit-button" id="button" type="submit" onclick="this.classList.toggle('button--loading')">
-                    <span class="button-text">일정 생성</span>
-                    </button>
+                <div class="button-edit">
+                    <div class="create-travel">
+                        <button class="submit-button" id="button" type="submit" onclick="this.classList.toggle('button--loading')">
+                        <span class="button-text">일정 생성</span>
+                        </button>
+                    </div>
+                    <div class="reset-travel">
+                        <button id="button" type="reset" onclick="reset()">
+                            초기화
+                        </button>
+                </div>
                 </div>
             </div>
         </form>
@@ -349,6 +349,7 @@
     <script src="./JS/loading.js" defer></script>
     <script src="./JS/scroll.js" defer></script>
     <script src="./JS/menu.js" defer></script>
+    <script src="./JS/reset.js" defer></script>
 
 </body>
 </html>

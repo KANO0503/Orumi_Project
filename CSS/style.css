@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+/* font-family: 'Abril Fatface', cursive; */
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR&display=swap');
+/* font-family: 'IBM Plex Sans KR', sans-serif; */
+
+
 :root {
     --text-color: #6A7BA2;
     --background-color: #FFD4D4;
@@ -98,17 +105,6 @@ form > div {
     margin-left: 14px;
 }
 
-.submit-button{
-    width: 100%;
-    height: 40px;
-    font-size: x-large;
-    font-weight: 500px;
-    border-radius: 4px;
-    margin-top: 10px;
-    box-sizing: content-box;
-    border-width: 0 0 3px 0;
-}
-
 /* 회원가입 페이지 */
 .title{
     color: var(--text-color);
@@ -200,7 +196,6 @@ legend{
 
 .popular-city-list{
     display: flex;
-    margin: 10px 0px 10px 30px; 
 }
 
 
@@ -208,8 +203,9 @@ legend{
 .osaka,
 .hukuoka{
     float: left;
-    width: 430px; 
-    margin: 10px 10px 10px 15px; 
+    width: 440px; 
+    margin-left: 20px;
+    margin-right: 20px;
     border-radius: 4px;
     text-align: center;
     overflow: hidden;
@@ -239,6 +235,8 @@ legend{
 
 #arrow{
     font-size: large;
+    font-weight: bold;
+    color: var(--text-color);
 }
 
 
@@ -273,20 +271,36 @@ legend{
 }
 
 /* user 여행 일정 입력, 답변 칸 */
+
+/* select태그 선택 클릭하면 사전에 썼던 안내글 사라짐 */
 select option[value=""][disabled] {
     display: none;
 }
 
+/* 출발지, 여행지 */
 select {
     -moz-appearance: none;
     -webkit-appearance: none;
     appearance: none;
-}
-
-select{
     font-family: 'IBM Plex Sans KR', sans-serif;
 }
 
+[type="date"]{
+    font-family: 'IBM Plex Sans KR', sans-serif;
+}
+
+select,
+[type="date"]{
+    border: 1px solid black;
+    border-radius: 4px;
+}
+
+/* 출발지, 여행지, 출발일, 도착일 title 글씨 굵게*/
+.chat-container p{
+    font-weight: bold;
+}
+
+/* user 여행 일정 입력, 답변 칸 div 나란히 정렬 */
 
 .chat-container{
     display: flex;
@@ -329,6 +343,7 @@ select{
     font-weight: bold;
 }
 
+/* 일정 생성 답변 칸 스타일 */
 .chat-textarea {
     resize: none;
     border: 2px solid var(--accent-color);
@@ -336,6 +351,10 @@ select{
     width: 500px;
     height: 330px;
     padding: 20px;
+    font-size: large;
+    font-family: 'IBM Plex Sans KR', sans-serif;
+
+
 }
 
 .qna{
@@ -366,6 +385,7 @@ select{
     font-family: 'IBM Plex Sans KR', sans-serif;
 }
 
+/* 출발지, 여행지, 출발일, 도착일 input 간격 조정 */
 #start-point,
 #destination,
 #depart-schedule,
@@ -398,9 +418,17 @@ select{
     flex: wrap;
 }
 
+.qna legend{
+    font-weight: bold;
+}
+
 .select-tema,
 .select-rent{
     margin-bottom: 15px;
+}
+
+.select-tema{
+    padding-right: 20px;
 }
 
 .select-rent{
@@ -408,27 +436,43 @@ select{
 }
 
 
-
 /* 버튼 */
 /* 회원가입, 로그인 버튼 */
 .submit-button {
     width: 100%;
     height: 40px;
+    font-size: x-large;
+    font-weight: 500px;
+    border-radius: 4px;
     margin-top: 10px;
     border-width: 0 0 3px 0;
     box-sizing: content-box;
     position: relative;
     background-color: var(--text-color);
     color: var(--background-color);
-    border-radius: 4px;
-    border: 1px solid gray;
+    border: 1px solid rgb(30, 37, 65);
+    font-family: 'IBM Plex Sans KR', sans-serif;
+    font-weight: bold;
     cursor: pointer;
+}
+/* 일정생성 버튼, 초기화 버튼 나란히 정렬 */
+.button-edit{
+    display: flex;
+}
+
+/* 일정생성 버튼, 초기화 버튼 margin조절 */
+.create-travel,
+.reset-travel{
+    margin-right: 30px;
+    margin-left: 30px;
 }
 
 /* 일정생성 버튼 */
 #button{
-    width: 500px;
+    width: 200px;
     height: 40px;
+    font-size: x-large;
+    font-weight: 500px;
     margin-top: 10px;
     border-width: 0 0 3px 0;
     box-sizing: content-box;
@@ -436,13 +480,23 @@ select{
     background-color: var(--text-color);
     color: var(--background-color);
     border-radius: 4px;
-    border: 1px solid gray;
+    border: 1px solid rgb(30, 37, 65);
     cursor: pointer;
+    font-family: 'IBM Plex Sans KR', sans-serif;
+    font-weight: bold;
 }
 
-.submit-button:active {
-    background-color: var(--accent-color);
+
+.submit-button:active,
+#button:active {
+    border: 0;
+    margin-top: 12px;
 }
+
+.submit-button:disabled
+#button:disabled {
+    background-color: #ccc;
+  }
 
 .button-text {
     color: var(--background-color);
@@ -469,7 +523,6 @@ select{
     border-radius: 50%;
     animation: button-loading-spinner 1s ease infinite;
 }
-
 
 @keyframes button-loading-spinner {
     from {
