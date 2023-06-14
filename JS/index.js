@@ -86,6 +86,7 @@ const apiPost = async () => {
   // 화면에 답변 그려주는 함수
   const printAnswer = (answer) => {
     let chat_content = document.getElementById("chat-content");
+    // 로딩을 시작하는 함수
     btnshow();
     chat_content.value = answer;
     // 로딩을 종료해주는 함수

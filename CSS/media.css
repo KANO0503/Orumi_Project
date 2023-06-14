@@ -1,6 +1,7 @@
 /* 모바일 웹 반응형 */
 
-/* 이용 방법 */
+/* 이용 방법  */
+/* 아직 수정중.. */
 @media screen and (max-width: 480px) {
     #plan-order{
         flex-direction: column;
