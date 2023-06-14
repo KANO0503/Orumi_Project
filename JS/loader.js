@@ -1,3 +1,4 @@
+// submit 버튼, loading 이미지 선언
 const submitBtn = document.getElementById('button');
 const loadingGif = document.getElementById('loading-gif');
 

@@ -13,15 +13,25 @@
 }
 
 .header{
+    margin: 0;
+    padding: 0;
     color: var(--text-color);
     background-color: #ffffff;
     border-bottom: 4px solid var(--background-color);
     display: flex;
     align-items: center;
     justify-content: space-between;
-    font-size: x-large;
     font-weight: bold;
-    padding: 8px 12px;
+    padding: 6px 12px;
+}
+
+.header h1{
+    font-size: medium;
+    font-weight: bold;
+}
+
+.header-click{
+    font-size: x-large;
 }
 
 a {
@@ -37,7 +47,7 @@ a {
 }
 
 .menu li{
-    padding: 8px 12px;
+    padding: 6px 12px;
 }
 
 .menu li:hover{
@@ -46,21 +56,11 @@ a {
     opacity: 0.8;
 }
 
-.menu_icons{
-    list-style: none;
-    color: var(--text-color);
-    display: flex;
-}
-
-.menu_icons{
-    padding: 8px 12px;
-    gap: 10px;
-    font-size: xx-large;
-}
 
 .header_toogleBtn{
     display: none;
     position: absolute;
+    margin-top: 12px;
     right: 32px;
     font-size: 24px;
     color: var(--text-color);

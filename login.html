@@ -7,17 +7,20 @@
   <!-- fontawesome -->
   <script src="https://kit.fontawesome.com/9e9931aed0.js" crossorigin="anonymous"></script>
   <!-- CSS -->
-  <link rel="stylesheet" href="./CSS/menu.css">
-  <link rel="stylesheet" href="./CSS/style.css">
-  <link rel="stylesheet" href="./CSS/media.css">
+  <link rel="stylesheet" href="./css/menu.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/media.css">
   <title>Login</title>
 </head>
-<body class="login_body">
+<body>
+    <!-- 메뉴바 상단 고정 -->
     <div class="header">
-      <div>
-          <i class="fa-solid fa-globe"></i>
-          <a href="https://kimyeoju.github.io/Orumi_Project/">Travel Japan</a>
-      </div>
+      <h1>
+          <div class="header-click">
+              <i class="fa-solid fa-globe"></i>
+                  <a href="https://kimyeoju.github.io/Orumi_Project/">Travel Japan</a>
+          </div>
+      </h1>
       <ul class="menu">
         <li><a href="./index.html#city-title">이용 방법</a></li>
         <li><a href="./index.html#chat-box">여행 계획</a></li>
@@ -28,11 +31,12 @@
           <i class="fas fa-bars"></i>
       </a>
       </div>
-  <!-- main -->
+  <!-- header -->
   <div class="login">
     <div>
         <h1 class="title">로그인</h1>
         <h2 class="description">아이디와 비밀번호를 입력해주세요</h2>
+        <!-- main -->
       <form>
         <div class="id">
           <label for="user-id">아이디</label>
@@ -48,9 +52,10 @@
         </div>
           <button class="submit-button" type="submit">로그인</button>
       </form>
+      <!-- main -->
     </div>
   </div>
-  <script src="./JS/menu.js"></script>
+  <script src="./js/menu.js"></script>
 
 </body>
 </html>
