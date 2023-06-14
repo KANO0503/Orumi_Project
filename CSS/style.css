@@ -386,6 +386,7 @@ select,
 }
 
 /* 출발지, 여행지, 출발일, 도착일 input 간격 조정 */
+
 #start-point,
 #destination,
 #depart-schedule,
@@ -498,6 +499,7 @@ select,
     background-color: #ccc;
 }
 
+/* 로딩 이미지 가운데 위치 */
 #loading-gif {
     display: flex;
     justify-content: center;
