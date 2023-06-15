@@ -13,7 +13,7 @@
 </head>
 
 <body>
-        <div class="header">
+        <header class="header">
             <h1>
                 <div class="header-click">
                     <i class="fa-solid fa-globe"></i>
@@ -29,10 +29,10 @@
                 <a href="#" class="header_toogleBtn">
                     <i class="fas fa-bars"></i>
                 </a>
-        </div>
+        </header>
         
         <!-- main -->
-        <div class="wrap">
+        <main class="wrap">
             <div class="content-wrap">
             <!-- 슬라이드 구현 -->
             <ul class="slides">
@@ -40,7 +40,7 @@
                 <input type="radio" name="radio-btn" id="img-1" checked />
                 <li class="slide-container">
                 <div class="slide">
-                    <img src="./Img/1.jpeg"/>
+                    <img src="./Img/1.jpg"/>
                 </div>
                 <!-- dots -->
                 <div class="nav">
@@ -53,7 +53,7 @@
                 <input type="radio" name="radio-btn" id="img-2" />
                 <li class="slide-container">
                     <div class="slide">
-                        <img src="./Img/2.avif" />
+                        <img src="./Img/2.jpg" />
                     </div>
                 <!-- dots -->
                 <div class="nav">
@@ -77,7 +77,7 @@
                 <input type="radio" name="radio-btn" id="img-4" />
                 <li class="slide-container">
                     <div class="slide">
-                        <img src="./Img/4.avif" />
+                        <img src="./Img/4.jpg" />
                     </div>
                 <!-- dots -->
                 <div class="nav">
@@ -89,7 +89,7 @@
                 <input type="radio" name="radio-btn" id="img-5" />
                 <li class="slide-container">
                     <div class="slide">
-                        <img src="./Img/5.jpeg" />
+                        <img src="./Img/5.jpg" />
                     </div>
                 <!-- dots -->
                 <div class="nav">
@@ -131,20 +131,20 @@
             <h3>일본 여행 인기 도시 TOP 3</h3>
         </div>
         <div class="popular-city-list">
-            <div class="cities">
-            <img src="./Img/tokyo.jpeg">
-            <p id="city-title">Tokyo</p>
-            <p>도쿄</p>
+            <div class="city-box">
+                <img src="./Img/tokyo.jpeg">
+                <p id="city-title">Tokyo</p>
+                <p>도쿄</p>
             </div>
-            <div class="cities">
-            <img src="./Img/osaka.avif">
-            <p id="city-title">Osaka</p>
-            <p>오사카</p>
+            <div class="city-box">
+                <img src="./Img/osaka.avif">
+                <p id="city-title">Osaka</p>
+                <p>오사카</p>
             </div>
-            <div class="cities">
-            <img src="./Img/hukuoka.jpeg">
-            <p id="city-title">Hukuoka</p>
-            <p>후쿠오카</p>
+            <div class="city-box">
+                <img src="./Img/hukuoka.jpeg">
+                <p id="city-title">Hukuoka</p>
+                <p>후쿠오카</p>
             </div>
         </div>
 
@@ -317,7 +317,9 @@
                     <!-- 일정생성 버튼 -->
                     <div class="create-travel">
                         <button class="submit-button" type="submit" id="button" onclick="btnshow()">일정 생성</button>
-                        <div id="loading-gif" style="display:none"><img src="./Img/spin.gif" alt="로딩이미지"></div>
+                        <div id="loading-gif" style="display: none;">
+                            <img src="./Img/spin.gif" alt="로딩이미지">
+                        </div>
                     </div>
                     <!-- 리셋버튼 -->
                     <div class="reset-travel">
@@ -337,7 +339,7 @@
             </div>
         </div>
     </div>
-</div>
+</main>
 <!-- main -->
 
     <!-- footer -->

@@ -40,6 +40,7 @@ ul {
     margin: 5px 0px 0px 20px;
     
 }
+
 .subtitle > a:hover{
     background-color: var(--background-color);
     border-radius: 3px;
@@ -191,7 +192,7 @@ legend{
     height: auto;
 }
 
-.popular-city-list:hover img{
+.city-box:hover img{
     transform: scale(1.1);
 }
 
@@ -200,7 +201,7 @@ legend{
 }
 
 
-.cities{
+.city-box{
     float: left;
     width: 440px; 
     margin-left: 20px;
@@ -212,6 +213,7 @@ legend{
 
 #city-title{
     font-family: 'Abril Fatface', cursive;
+    font-size: x-large;
     color: black;
 }
 
@@ -264,13 +266,17 @@ legend{
     background-color: var(--background-color);
     text-align: center;
     justify-content: center;
-}
-
-#chat-box{
     font-size: xx-large;
     font-weight: bold;
     color: black;
 }
+
+#chat-box p{
+    margin: 0px 0px 0px 0px;
+    line-height: 120%;
+    padding: 8px 0px;
+}
+
 
 #plane-icon{
     color: var(--text-color);
@@ -281,6 +287,7 @@ legend{
 /* select태그 선택 클릭하면 사전에 썼던 안내글 사라짐 */
 select option[value=""][disabled] {
     display: none;
+    font-size: large;
 }
 
 /* 출발지, 여행지 */
@@ -289,17 +296,17 @@ select {
     -webkit-appearance: none;
     appearance: none;
     font-family: 'IBM Plex Sans KR', sans-serif;
+    font-size: large;
+    padding-left: 8px;
 }
-
-[type="date"]{
-    font-family: 'IBM Plex Sans KR', sans-serif;
-}
-
 select,
 [type="date"]{
+    font-family: 'IBM Plex Sans KR', sans-serif;
     border: 1px solid black;
     border-radius: 4px;
 }
+
+
 
 /* 출발지, 여행지, 출발일, 도착일 title 글씨 굵게*/
 .chat-container p{
@@ -376,6 +383,9 @@ select,
     flex-direction: row;
 }
 
+.travel-date input{
+    padding-left: 8px;
+}
 .user_input{
     display: inline-block;
     flex-direction: row;
@@ -394,14 +404,22 @@ select,
 /* 출발지, 여행지, 출발일, 도착일 input 간격 조정 */
 
 #start-point,
-#destination,
+#destination {
+    width: 240px;
+    height: 42px;
+    border-radius: 4px;
+    font-size: large;
+}
 #depart-schedule,
-#arrive-schedule{
+#arrive-schedule {
     width: 230px;
     height: 40px;
     border-radius: 4px;
     font-size: large;
 }
+
+
+
 
 .field > legend{
     align-items: center;
@@ -417,7 +435,7 @@ select,
 .select{
     border:0;
     margin: 20px 0px 10px 0px;
-}
+} 
 
 .select ul{
     list-style: none;
@@ -506,6 +524,7 @@ select,
 }
 
 /* 로딩 이미지 가운데 위치 */
+
 #loading-gif {
     display: flex;
     justify-content: center;
