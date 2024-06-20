@@ -1,3 +1,6 @@
+https://github.com/KANO0503/Orumi_Project
+
+
 # Travel Japan✈️
 - 일본 여행만을 다루는 전문적인 일본 여행 플래너 서비스입니다.
   * HTML, CSS, JavaScript을 이용한 미니 프로젝트
