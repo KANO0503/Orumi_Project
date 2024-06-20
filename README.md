@@ -1,4 +1,4 @@
-https://github.com/KANO0503/Orumi_Project
+[https://github.com/KANO0503/Orumi_Project](https://kano0503.github.io/Orumi_Project/)
 
 
 # Travel Japan✈️
